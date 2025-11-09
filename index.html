@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Estadística - Herberth Coc Chon</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container glass">
+  <h2>Proyecto Estadística</h2>
+  <p class="sub">Distribución de Frecuencias — Sección “A”</p>
+
+  <!-- Paso 1 -->
+  <div id="paso1">
+    <label for="cantidad">Ingrese la cantidad de datos:</label><br>
+    <input type="number" id="cantidad" min="1" max="100" placeholder="Ejemplo: 8">
+    <button onclick="iniciarIngreso()">Aceptar</button>
+  </div>
+
+  <!-- Paso 2 -->
+  <div id="paso2" style="display:none;">
+    <label id="labelDato">Ingrese dato #1 (entre 21 y 100):</label><br>
+    <input type="number" id="dato" min="21" max="100">
+    <button onclick="agregarDato()">Agregar dato</button>
+    <ul id="listaDatos"></ul>
+  </div>
+
+  <!-- Resultados -->
+  <div id="resultados" style="display:none;">
+  <p id="listaDatosFinal" style="color: cyan; font-weight: bold;"></p>
+
+    <h3>Tabla de Frecuencias</h3>
+    <table id="tablaFrecuencias">
+      <thead>
+        <tr>
+          <th>Intervalo</th>
+          <th>Marca</th>
+          <th>F. Absoluta</th>
+          <th>F. Acumulada</th>
+          <th>F. Relativa</th>
+          <th>% Relativa</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="medidas">
+      <p id="media"></p>
+      <p id="mediana"></p>
+      <p id="moda"></p>
+      <p id="desvMedia"></p>
+      <p id="desvEstandar"></p>
+    </div>
+
+    <canvas id="grafico" height="120"></canvas>
+
+    <div class="acciones">
+      <button onclick="reiniciar()">Limpiar todo</button>
+      <button onclick="window.close()">Salir</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Universidad Mariano Gálvez de Guatemala — Herberth Eduardo Coc Chon</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
