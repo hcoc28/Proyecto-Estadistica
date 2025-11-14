@@ -3,7 +3,7 @@ let datos = [];
 
 function iniciarIngreso() {
   cantidad = parseInt(document.getElementById("cantidad").value);
-  if (isNaN(cantidad) || cantidad < 20) {
+  if (isNaN(cantidad) || cantidad <=19) {
     alert("Ingrese una cantidad válida de datos (mínimo 20).");
     return;
   }
