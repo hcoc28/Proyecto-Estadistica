@@ -33,11 +33,6 @@ body {
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   text-align: center;
-  display: flex;
-  align-items: center;
-  gap: 15px; /* separación entre imagen y texto */
-  justify-content: center; /* centra el título con la imagen */
-  margin-bottom: 20px;
 }
 
 h2 {
