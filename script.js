@@ -3,13 +3,13 @@ let datos = [];
 
 function iniciarIngreso() {
   cantidad = parseInt(document.getElementById("cantidad").value);
-  if (isNaN(cantidad) || cantidad <= 0) {
+  if (isNaN(cantidad) || cantidad <= 20) {
     alert("Ingrese una cantidad válida de datos (mínimo 1).");
     return;
   }
   document.getElementById("paso1").style.display = "none";
   document.getElementById("paso2").style.display = "block";
-  document.getElementById("labelDato").innerText = `Ingrese dato #1 (entre 21 y 100):`;
+  document.getElementById("labelDato").innerText = `Ingrese dato #1 (entre 1 y 100):`;
 }
 
 function agregarDato() {
